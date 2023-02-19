@@ -60,9 +60,11 @@ export class DeliveryComponent implements OnInit {
   }
 
   onSubmit() {
-    this.deliveryService.postForm(this.form.value);
-    this.setFormValuesToDefault();
-    this.openPopup();
+    if (!this.form.invalid) {
+      this.deliveryService.postForm(this.form.value);
+      this.setFormValuesToDefault();
+      this.openPopup();
+    }
   }
 
   private setFormValuesToDefault(): void {

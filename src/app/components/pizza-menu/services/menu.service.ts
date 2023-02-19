@@ -10,7 +10,7 @@ export class MenuService {
   constructor(private http: HttpClient) {}
 
   getItems(): Observable<menuItem[]> {
-    const a = this.http.get<menuItem[]>('/src/assets/menu.json');
+    const a = this.http.get<menuItem[]>('assets/menu.json');
     a.subscribe((data) => console.log(data));
     return a;
   }

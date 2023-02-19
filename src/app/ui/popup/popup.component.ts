@@ -22,7 +22,7 @@ export class PopupComponent implements AfterViewInit {
     document.querySelector('body')!.style.overflow = 'hidden';
   }
 
-  onClose(e: MouseEvent): void {
+  onClose(): void {
     this.close.emit();
     document.querySelector('body')!.style.overflow = 'auto';
   }

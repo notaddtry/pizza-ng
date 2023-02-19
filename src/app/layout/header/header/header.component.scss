@@ -6,17 +6,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+    justify-content: center;
+    gap: 25px;
+  }
 }
 
 nav {
   margin: 0 auto;
+
+  @media (max-width: 767px) {
+    margin: 0;
+  }
 }
 
 .nav-list {
   display: flex;
   width: 100%;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    text-align: right;
+  }
 }
 .nav-item {
   display: inline-block;
   padding: 0 25px;
+
+  @media (max-width: 767px) {
+    padding: 10px 0 0 0;
+  }
 }

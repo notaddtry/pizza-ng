@@ -1,0 +1,9 @@
+<button
+  class="button"
+  [ngStyle]="{ height: height, width: width }"
+  [ngClass]="{ disabled: disabled }"
+  (click)="onClick()"
+  [disabled]="disabled"
+>
+  {{ name }}
+</button>

@@ -1,0 +1,16 @@
+.button {
+  background-color: #ffaf18;
+  color: #382400;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: #ffeac4;
+  color: #c5b596;
+  cursor: auto;
+}

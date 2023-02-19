@@ -1,0 +1,20 @@
+.wrapper {
+  margin-top: 160px;
+
+  .menu-header {
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 65px;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    > * {
+      max-width: 282px;
+    }
+  }
+}

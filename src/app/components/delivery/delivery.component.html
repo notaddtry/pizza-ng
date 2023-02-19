@@ -1,0 +1,55 @@
+<div class="wrapper">
+  <div class="delivery-time">
+    <span class="delivery-time-header">
+      <span class="delivery-header-first yellow">Хватит думать!</span>
+      <span class="delivery-header-secondary">Доставим заказ за 30 минут!</span>
+    </span>
+    <span class="delivery-time-text"
+      >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum cum
+      tenetur iusto sunt fugiat est praesentium similique officia at, doloribus
+      saepe corporis sequi esse animi aliquam officiis excepturi eligendi fuga
+      dolore quis deleniti totam? Aliquid suscipit perferendis a laudantium
+      quibusdam beatae animi expedita, voluptatem, delectus, fugit sunt. Error
+      libero delectus, culpa ab vero voluptatum quos aperiam ea nostrum
+      accusamus laudantium.</span
+    >
+  </div>
+  <form class="form-wrapper" [formGroup]="form">
+    <input
+      type="text"
+      placeholder="Введите имя"
+      formControlName="name"
+      [ngClass]="{ invalid: isControlInvalid('name') }"
+    />
+
+    <input
+      type="address"
+      placeholder="Адрес доставки"
+      formControlName="address"
+      [ngClass]="{ invalid: isControlInvalid('address') }"
+    />
+
+    <input
+      type="phone"
+      placeholder="Телефон"
+      formControlName="phone"
+      [ngClass]="{ invalid: isControlInvalid('phone') }"
+    />
+
+    <app-button
+      [disabled]="isReadySubmit()"
+      name="Оформить заказ"
+      width="330px"
+      (click)="onSubmit()"
+    ></app-button>
+  </form>
+  <div class="image">
+    <img src="../../../assets/images/pizzzzza.png" alt="pizza" />
+  </div>
+</div>
+
+<app-popup
+  *ngIf="isPopupSeen"
+  (close)="closePopup()"
+  content="Спасибо за заказ"
+></app-popup>

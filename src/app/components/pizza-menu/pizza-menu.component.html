@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <span class="menu-header">Выберите свою любимую пиццу</span>
+  <ul class="menu-list">
+    <li class="menu-item" *ngFor="let item of menuItems">
+      <app-menu-item
+        [name]="item.name"
+        [info]="item.info"
+        [imagePath]="item.imagePath"
+      ></app-menu-item>
+    </li>
+  </ul>
+</div>

@@ -14,13 +14,33 @@ li {
   padding: 0;
 }
 
-a {
+a,
+button,
+input {
   text-decoration: none;
   color: inherit;
+  border: none;
+  outline: none;
 }
 
 .container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 1199px) {
+    max-width: 980px;
+  }
+
+  @media (max-width: 991px) {
+    max-width: 750px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 320px;
+  }
+}
+
+.yellow {
+  color: #ffaf18;
 }
